@@ -7,9 +7,8 @@ import LoginScreen from '../screens/LoginScreen';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store/store';
 
-// --- Theme Constants for Navigation ---
-const PRIMARY_COLOR_NAV = '#146EF5'; // A deeper, richer blue for the header
-const BACKGROUND_COLOR_NAV = '#FFFFFF'; // White background for modern look
+const PRIMARY_COLOR_NAV = '#146EF5';
+const BACKGROUND_COLOR_NAV = '#FFFFFF';
 const TEXT_COLOR_NAV = '#FFFFFF';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -32,41 +31,41 @@ const AppNavigator: React.FC = () => {
         headerShadowVisible: false,
       }}
     >
-      <Stack.Screen 
-        name="Login" 
-        component={LoginScreen} 
-        options={{ 
+      <Stack.Screen
+        name="Login"
+        component={LoginScreen}
+        options={{
           title: 'Sign In',
           headerStyle: {
-            backgroundColor: BACKGROUND_COLOR_NAV, 
+            backgroundColor: BACKGROUND_COLOR_NAV,
           },
-          headerTintColor: PRIMARY_COLOR_NAV, 
+          headerTintColor: PRIMARY_COLOR_NAV,
           headerTitleStyle: {
             fontWeight: '900',
             fontSize: 24,
           }
-        }} 
+        }}
       />
-      
-      <Stack.Screen 
-        name="Home" 
-        component={HomeScreen} 
-        options={{ 
-          title: 'User List', 
+
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          title: 'User List',
           headerBackVisible: false,
-        }} 
+        }}
       />
-      
-      <Stack.Screen 
-        name="Details" 
-        component={DetailsScreen} 
-        options={{ 
+
+      <Stack.Screen
+        name="Details"
+        component={DetailsScreen}
+        options={{
           title: 'User Details',
           headerTitleStyle: {
             fontWeight: '600',
             fontSize: 17,
           }
-        }} 
+        }}
       />
     </Stack.Navigator>
   );

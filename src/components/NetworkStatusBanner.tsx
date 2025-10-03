@@ -2,10 +2,10 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useNetworkStatus } from '../hooks/useNetworkStatus';
 
-const SUCCESS_COLOR = '#34C759'; // iOS Green
-const DANGER_COLOR = '#FF3B30'; // iOS Red
-const BG_SUCCESS = '#D8F5E1'; // Very light green
-const BG_DANGER = '#FDE4E4'; // Very light red
+const SUCCESS_COLOR = '#34C759'; 
+const DANGER_COLOR = '#FF3B30'; 
+const BG_SUCCESS = '#D8F5E1';  
+const BG_DANGER = '#FDE4E4';  
 
 const NetworkStatusBanner: React.FC = () => {
   const isOnline = useNetworkStatus();
@@ -23,7 +23,7 @@ const NetworkStatusBanner: React.FC = () => {
 
 const styles = StyleSheet.create({
   shadowWrapper: {
-    // Wrapper to apply a subtle shadow that lifts the banner
+    
     width: '100%',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 1 },

@@ -6,8 +6,7 @@ export const useNetworkStatus = (): boolean | null => {
 
   const evaluateState = (state: NetInfoState) => {
     const isConnected = state.isConnected ?? false;
-
-    // Only use isInternetReachable if not null
+ 
     const isReachable =
       state.isInternetReachable === null ? true : state.isInternetReachable;
 
@@ -15,10 +14,7 @@ export const useNetworkStatus = (): boolean | null => {
   };
 
   useEffect(() => {
-    // Initial check
-    NetInfo.fetch().then(evaluateState);
-
-    // Subscribe to updates
+     NetInfo.fetch().then(evaluateState); 
     const unsubscribe = NetInfo.addEventListener(evaluateState);
 
     return () => unsubscribe();

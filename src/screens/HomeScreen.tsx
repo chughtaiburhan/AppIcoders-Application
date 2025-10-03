@@ -9,9 +9,8 @@ import { RootState } from '../store/store';
 
 const API_URL = 'https://jsonplaceholder.typicode.com/users';
 
-// --- Theme & Spacing Constants ---
-const PRIMARY_COLOR = '#007aff'; // Blue
-const ACCENT_COLOR = '#34c759'; // Green for success/info
+const PRIMARY_COLOR = '#007aff';
+const ACCENT_COLOR = '#34c759';
 const BACKGROUND_COLOR = '#f0f2f5';
 const CARD_COLOR = '#ffffff';
 const TEXT_DARK = '#212529';
@@ -28,7 +27,6 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
   const userEmail = useSelector((state: RootState) => state.auth.user?.email);
   const { width } = useWindowDimensions();
 
-  // Responsive padding calculation
   const horizontalPadding = width > 768 ? 40 : SCREEN_PADDING;
   const listPadding = { paddingHorizontal: horizontalPadding, paddingVertical: 15 };
 
@@ -166,7 +164,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: 'center',
   },
-  // --- Header Styles ---
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -197,7 +194,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 14,
   },
-  // --- List Styles ---
   listContent: {
     paddingBottom: 30,
   },
@@ -208,7 +204,6 @@ const styles = StyleSheet.create({
     padding: 18,
     borderRadius: BORDER_RADIUS_L,
     marginBottom: 12,
-    // Deeper shadow for eye-catching look
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.1,
@@ -219,7 +214,6 @@ const styles = StyleSheet.create({
     flex: 1,
     marginLeft: 15,
   },
-  // --- Avatar Styling ---
   avatarPlaceholder: {
     width: 50,
     height: 50,
@@ -233,7 +227,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
   },
-  // --- Text Styles ---
   name: {
     fontSize: 18,
     fontWeight: '700',
@@ -249,7 +242,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: TEXT_MUTED,
   },
-  // --- Error/Retry Styles ---
   retryButton: {
     backgroundColor: ACCENT_COLOR,
     paddingHorizontal: 20,
